@@ -1,0 +1,11 @@
+登入Heroku：
+heroku login
+
+初始化專案(只要第一次輸入就好，之後都不用再初始化)：
+git init
+heroku git:remote -a Heroku上建立的專案名稱
+
+部屬到Heroku：
+git add .
+git commit -m "commit的訊息"
+git push heroku master
