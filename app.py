@@ -162,7 +162,6 @@ def delete_item_in_store(name):
                 if i == len(items)-1:
                     return jsonify({'message': 'item not found'})
     else:
-        # print('test')
         return jsonify({'messgae': 'store not found'})
 
 # app.run(debug=True)
