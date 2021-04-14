@@ -165,6 +165,5 @@ def delete_item_in_store(name):
         return jsonify({'messgae': 'store not found'})
 
 # app.run(debug=True)
-print('test heroku')
 if __name__ == '__main__':
     app.run()
