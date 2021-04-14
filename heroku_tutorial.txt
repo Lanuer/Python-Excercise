@@ -1,3 +1,14 @@
+建立檔名Procfile，內容：
+web gunicorn app:app
+
+建立檔名requirements.txt，內容：
+Flask
+gunicorn
+pymongo[tls,srv,gssapi,snappy]
+
+建立檔名runtime.txt，內容：
+python-3.9.2
+
 登入Heroku：
 heroku login
 
