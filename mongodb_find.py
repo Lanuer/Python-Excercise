@@ -1,8 +1,8 @@
 import mongodb_connect
 
-def find_one(where=None):
+def find_one(where=None, projection=None):
     if mongodb_connect.connect() == True:
-        result = mongodb_connect.getCol().find_one(where)
+        result = mongodb_connect.getCol().find_one(where, projection)
         return result
     else:
         print('find fail')

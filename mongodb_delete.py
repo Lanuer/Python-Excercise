@@ -4,8 +4,10 @@ def delete_one(bson):
     if mongodb_connect.connect() == True:
         result = mongodb_connect.getCol().delete_one(bson)
         print('delete success')
+        return 'success'
     else:
         print('delete fail')
+        return 'fail'
 
 def delete_many(bson={}):
     if mongodb_connect.connect() == True:
