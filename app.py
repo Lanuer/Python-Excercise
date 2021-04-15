@@ -20,8 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # return render_template('index.html')
-    return 'home'
+    return render_template('index.html')
 
 #取得所有商店
 @app.route('/stores')
