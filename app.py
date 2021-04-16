@@ -71,13 +71,16 @@ def create_item_in_store(name):
                 'price': request_data['price']
         }
         items = old_item
-        for i in range(0, len(items)):
-            if request_data['name'] == items[i]['name']:
-                items[i]['price'] = request_data['price']
-                break
-            else:
-                if i == len(items)-1:
-                    items.append(new_item)
+        if len(items) == 0:
+            items.append(new_item)
+        else:
+            for i in range(0, len(items)):
+                if request_data['name'] == items[i]['name']:
+                    items[i]['price'] = request_data['price']
+                    break
+                else:
+                    if i == len(items)-1:
+                        items.append(new_item)
         where = {'name': name}
         value = {'$set': {'items': items}}
         mongodbupdate.update_one(where, value)
